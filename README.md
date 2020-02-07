@@ -2,7 +2,8 @@
 Aggregating and mapping news data to track nCorona cases (suspected and confirmed) in the Philippines.
 
 ## Data
-gab/rappler_scraped.csv - Raw Rappler date <br>
+gab/rappler_scraped.csv - Raw Rappler data <br>
+gab/abscbn_scraped.csv - Raw ABS-CBN data <br>
 gab/rappler_test.csv - Cleaned Rappler data 
 
 ## Map Prototype
