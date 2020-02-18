@@ -3,7 +3,8 @@ library(shiny)
 
 
 df <- read.csv(file = 'ncov_parsed.csv')
-
+df$Date <- as.Date(as.POSIXct(df$Date,format="%Y-%m-%dT%H:%M:%OS"))
+str(df)
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
@@ -19,8 +20,8 @@ ui <- fluidPage(
       
       # Input: Slider for the number of bins ----
       dateRangeInput("daterange1", "Date range:",
-                     start = "2020-01-23",
-                     end   = "2020-02-05")
+                     start = min(df$Date),
+                     end   = max(df$Date))
       
     ),
     
