@@ -43,12 +43,12 @@ server <- function(input, output,session) {
       clearMarkers() %>%
       addCircleMarkers(radius = ~Suspected - 70, 
                        opacity = ~ifelse(Suspected == 0, 0,100 ), 
-                       color = 'yellow', 
+                       color = 'blue', 
                        label = ~Location
                        ) %>%
       addCircleMarkers(radius = ~ifelse(Confirmed == 0, 0,10), 
                        opacity = ~ifelse(Confirmed == 0, 0,1 ), 
-                       color = 'red', stroke = FALSE, 
+                       color = 'red', 
                        label = ~Location) 
   })
   
