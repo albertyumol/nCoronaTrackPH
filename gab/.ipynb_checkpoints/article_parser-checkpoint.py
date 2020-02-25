@@ -83,7 +83,7 @@ def get_covid_counts():
     dfs = [pd.read_csv(f) for f in files]
     df = pd.concat(dfs,ignore_index=True)
     df['date'] = [parser.parse(date).strftime('%Y-%m-%d') for date in df['date']]
-    df = df[(df['title'].str.contains('coronavirus'))]
+    #df = df[(df['text'].str.contains('coronavirus'))]
     #df = df[df['category'] == 'Philippines']
     df = df.drop_duplicates()
     df = df.reset_index(drop = True)
